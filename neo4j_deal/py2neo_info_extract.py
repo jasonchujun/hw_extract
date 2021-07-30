@@ -321,7 +321,7 @@ class AddCatalog(object):
     def add_catalog(self):
         pxl_data = PXLStateExtract().get_pxlstate()
         path_set = set()
-        all_path_list=[]
+        all_path_list = []
         for k, v in pxl_data.items():
             if v["PATH_NAME"] not in path_set:
                 path_set.add(v["PATH_NAME"])
