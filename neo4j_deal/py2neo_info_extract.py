@@ -333,24 +333,24 @@ class AddCatalog(object):
 
 
 if __name__ == '__main__':
-    # st = time.time()
-    # panc = PartNodeCreate()
-    # panc.write_part_node_into_neo4j()
-    #
-    # pinc = PinNodeCreate()
-    # pinc.write_port_node_into_neo4j()
-    # et = time.time()
-    # print("cost time is ", et - st)
-    #
-    # create_index()
-    #
-    # rc = RelationshipCreate()
-    # rc.nodes_connect_create()
-    # et1 = time.time()
-    # print("add relationship cost time is ", et1 - et)
+    st = time.time()
+    panc = PartNodeCreate()
+    panc.write_part_node_into_neo4j()
+
+    pinc = PinNodeCreate()
+    pinc.write_port_node_into_neo4j()
+    et = time.time()
+    print("cost time is ", et - st)
+
+    create_index()
+
+    rc = RelationshipCreate()
+    rc.nodes_connect_create()
+    et1 = time.time()
+    print("add relationship cost time is ", et1 - et)
 
     # rc = RelationshipCreate()
     # rc.add_to_queue()
     # rc.moutiprocess_task()
-    ac = AddCatalog()
-    ac.add_catalog()
+    # ac = AddCatalog()
+    # ac.add_catalog()
